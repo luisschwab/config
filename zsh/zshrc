@@ -1,0 +1,16 @@
+# import aliases from `zsh_aliases`
+if [ -f ~/git/config/zsh/zsh_aliases ]; then
+    source ~/git/config/zsh/zsh_aliases
+fi
+
+# enable completions
+# just completion
+fpath=($HOME/git/config/zsh/completion $fpath)
+autoload -Uz compinit
+compinit
+
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/git/config/scripts:$PATH"

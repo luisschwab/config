@@ -1,0 +1,15 @@
+# native commands
+alias c="clear"
+alias ll="ls -laF"
+alias nproc="sysctl -n hw.logicalcpu"
+
+# use `~/.bitcoin` as the datadir for `bitcoind`, `bitcoin-cli` and `bitcoin-qt`
+alias bitcoind="bitcoind -datadir=$HOME/.bitcoin"
+alias bitcoin-cli="bitcoin-cli -datadir=$HOME/.bitcoin"
+alias bitcoin-qt="bitcoin-qt -datadir=$HOME/.bitcoin"
+
+# helix
+alias h="hx"
+
+# vim
+alias v="vim"

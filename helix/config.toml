@@ -1,0 +1,80 @@
+theme = "gruvbox_dark_hard_transparent"
+
+[editor]
+line-number = "relative"
+mouse = true
+scrolloff = 8
+cursorline = true
+rulers = [ 106 ]
+true-color = true
+color-modes = true
+completion-trigger-len = 1
+idle-timeout = 50
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = [ "mode", "spinner", "version-control" ]
+center = [ "file-name" ]
+right = [ "workspace-diagnostics", "selections", "position-percentage", "position", "file-encoding", "file-type" ]
+
+[editor.indent-guides]
+render = true
+character = "╎"
+
+[editor.lsp]
+display-messages = true
+display-progress-messages = true
+display-inlay-hints = true
+
+[keys.normal]
+Cmd-s = ":write"
+Cmd-b = ":echo %sh{git show --no-patch --format='%%h (%%an: %%ar): %%s' $(git blame -p %{buffer_name} -L%{cursor_line},+1 | head -1 | cut -d' ' -f1)}"
+esc = [ "collapse_selection", "keep_primary_selection" ]
+A-x = "extend_to_line_bounds"
+X = [ "extend_line_up", "extend_to_line_bounds" ]
+A-g = ":reset-diff-change"
+# lazygit integration: https://github.com/helix-editor/helix/discussions/12045
+C-g = [
+    ":write-all", 
+    ":new", 
+    ":insert-output lazygit", 
+    ":buffer-close!", 
+    ":redraw", 
+    ":reload-all"
+]
+# yazi integration: https://github.com/helix-editor/helix/discussions/12934
+C-y = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
+# Swap lines up and down
+A-j = [ "ensure_selections_forward", "extend_to_line_bounds", "extend_char_right", "extend_char_left", "delete_selection", "add_newline_below", "move_line_down", "replace_with_yanked" ]
+A-k = [ "ensure_selections_forward", "extend_to_line_bounds", "extend_char_right", "extend_char_left", "delete_selection", "move_line_up", "add_newline_above", "move_line_up", "replace_with_yanked" ]
+
+[keys.normal.space]
+q = ":quit"
+Q = ":quit-all!"
+Y = ":pipe pbcopy"
+# Generate permalink for current line
+# o = [":sh echo \"$(git remote get-url origin | sed 's/\\.git$//' | sed 's/git@github\\.com:/https:\\/\\/github\\.com\\//')/blob/$(git rev-parse HEAD)/%{buffer_name}#L%{cursor_line}\" | pbcopy"]
+o = [":sh echo \"$(git remote get-url origin | sed 's/\\.git$//' | sed 's/git@github\\.com:/https:\\/\\/github\\.com\\//')/blob/$(git rev-parse HEAD)/%{buffer_name}#L%{selection_line_start}-L%{selection_line_end}\" | pbcopy"] 
+
+[keys.select]
+X = [ "extend_line_up", "extend_to_line_bounds" ]
+A-x = "extend_to_line_bounds"
+A-g = ":reset-diff-change"
+
+[keys.select.space]
+# Generate permalink for current selection line range
+o = [":sh echo \"$(git remote get-url origin | sed 's/\\.git$//' | sed 's/git@github\\.com:/https:\\/\\/github\\.com\\//')/blob/$(git rev-parse HEAD)/%{buffer_name}#L%{selection_line_start}-L%{selection_line_end}\" | pbcopy"] 

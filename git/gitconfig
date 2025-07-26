@@ -1,0 +1,26 @@
+[user]
+    name = Luis Schwab
+    email = luisschwab@protonmail.com
+    signingkey = FC43D25BEDD5EE7C
+[core]
+    editor = hx
+    filemode = false
+    excludesfile = /Users/luisschwab/git/config/git/gitignore
+[init]
+    defaultBranch = master
+[alias]
+    d = diff
+    l = log --color --graph \
+        --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+        --abbrev-commit
+    p = pull
+    s = status
+    sd = diff --staged
+    sync = pull upstream master
+    undo = reset --soft HEAD^
+[push]
+    autoSetupRemote = true
+[commit]
+    gpgsign = true
+[rerere]
+    enabled = true

@@ -10,6 +10,9 @@ alias bitcoin-qt="bitcoin-qt -datadir=$HOME/.bitcoin"
 
 # helix
 alias h="hx"
-
 # vim
 alias v="vim"
+# just
+alias j="just"
+# ripgrep for rust files
+alias rgs="rg --type rust"

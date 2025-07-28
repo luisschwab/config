@@ -3,8 +3,10 @@ if [ -f ~/git/config/zsh/zsh_aliases ]; then
     source ~/git/config/zsh/zsh_aliases
 fi
 
+# disable autoupdates for brew
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 # enable completions
-# just completion
 fpath=($HOME/git/config/zsh/completion $fpath)
 autoload -Uz compinit
 compinit

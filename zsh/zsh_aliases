@@ -1,18 +1,30 @@
 # native commands
 alias c="clear"
+alias l="ls -laF"
 alias ll="ls -laF"
 alias nproc="sysctl -n hw.logicalcpu"
 
-# use `~/.bitcoin` as the datadir for `bitcoind`, `bitcoin-cli` and `bitcoin-qt`
-alias bitcoind="bitcoind -datadir=$HOME/.bitcoin"
-alias bitcoin-cli="bitcoin-cli -datadir=$HOME/.bitcoin"
-alias bitcoin-qt="bitcoin-qt -datadir=$HOME/.bitcoin"
-
 # helix
 alias h="hx"
+# trash
+alias t="trash"
 # vim
 alias v="vim"
 # just
 alias j="just"
 # ripgrep for rust files
 alias rgs="rg --type rust"
+
+# use `~/.bitcoin` as the datadir for `bitcoind`, `bitcoin-cli` and `bitcoin-qt`
+alias bitcoind="bitcoind -datadir=$HOME/.bitcoin"
+alias bitcoin-cli="bitcoin-cli -datadir=$HOME/.bitcoin"
+alias bitcoin-qt="bitcoin-qt -datadir=$HOME/.bitcoin"
+
+# mkdir and cd to directory in one go
+mkcd() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: mkcd <directory>"
+        return 1
+    fi
+    mkdir -p "$1" && cd "$1"
+}

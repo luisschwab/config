@@ -21,6 +21,7 @@
     undo = reset --soft HEAD^
 [push]
     autoSetupRemote = true
+    default = current
 [commit]
     gpgsign = true
 [rerere]

@@ -30,7 +30,7 @@ ln -s ~/git/config/helix/themes/gruvbox_dark_hard_transparent.toml ~/git/config/
 
 ## hosts
 
-`/etc/hosts` so I don't have to remember a million IP addresses (requires a hard link):
+`/etc/hosts` so I don't have to remember a million IP addresses (requires a hard link).
 
 ```shell
 ln ~/git/hosts /etc/hosts
@@ -43,7 +43,7 @@ Useful scripts. The `scripts` folder is added to `PATH` on `.zshrc`.
 ## ssh
 
 Set the `TERM` envronment variable to `xterm256-color` when connecting over `ssh`
-(because nobody supports `xterm-ghostty` yet):
+(because nobody supports `xterm-ghostty` yet).
 
 ```shell
 ln -s ~/git/config/ssh/config ~/.ssh/config
@@ -51,7 +51,7 @@ ln -s ~/git/config/ssh/config ~/.ssh/config
 
 ## vim
 
-Because we need to remember our origins:
+Because we need to remember our origins.
 
 ```shell
 ln -s ~/git/config/vim/vimrc ~/.vimrc
@@ -59,7 +59,7 @@ ln -s ~/git/config/vim/vimrc ~/.vimrc
 
 ## zsh
 
-The _Z_ shell:
+The _Z_ shell.
 
 ```shell
 ln -s ~/git/config/zsh/zshrc ~/.zshrc
@@ -80,3 +80,10 @@ same folder as the tunnel configuration file.
 ln -s ~/git/config/wireguard/example.conf /opt/homebrew/etc/wireguard/example.conf
 ```
 
+## zed
+
+_Zed_ is a code editor written is Rust.
+
+```
+ln -s ~/git/config/zed/settings.json ~/.config/zed/settings.json
+```

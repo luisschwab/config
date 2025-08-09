@@ -2,6 +2,7 @@
 alias c="clear"
 alias l="ls -laF"
 alias ll="ls -laF"
+alias lh="ls -lahF"
 alias nproc="sysctl -n hw.logicalcpu"
 
 # helix

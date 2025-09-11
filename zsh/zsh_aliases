@@ -5,6 +5,8 @@ alias ll="ls -laF"
 alias lh="ls -lahF"
 alias nproc="sysctl -n hw.logicalcpu"
 
+# cargo run
+alias cr="cargo run"
 # helix
 alias h="hx"
 # trash
@@ -15,6 +17,10 @@ alias v="vim"
 alias j="just"
 # ripgrep for rust files
 alias rgs="rg --type rust"
+# ripgrep for go files
+alias rgg="rg --type go"
+# use the large-v2 model for whisper.cpp
+alias whisper-cli="whisper-cli -m ~/git/whisper.cpp/models/ggml-large-v2.bin"
 
 # use `~/.bitcoin` as the datadir for `bitcoind`, `bitcoin-cli` and `bitcoin-qt`
 alias bitcoind="bitcoind -datadir=$HOME/.bitcoin"

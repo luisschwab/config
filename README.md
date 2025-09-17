@@ -19,9 +19,19 @@ Good ol' `git`.
 ln -s ~/git/config/git/gitconfig ~/.gitconfig
 ```
 
+## halloy
+
+Halloy is an IRC client.
+
+```shell
+mkdir -p ~/.config/halloy
+
+ln -s ~/git/config/halloy/config.toml ~/.config/halloy/config.toml
+```
+
 ## helix
 
-`helix` is _a post-modern text editor_ (helix btw).
+`helix` is _a post-modern text editor_.
 
 ```shell
 ln -s ~/git/config/helix/config.toml ~/.config/helix/config.toml

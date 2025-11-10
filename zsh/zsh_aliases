@@ -15,8 +15,10 @@ alias t="trash"
 alias v="vim"
 # just
 alias j="just"
+# zed
+alias z="zed"
 # ripgrep for rust files
-alias rgs="rg --type rust"
+alias rgs="rg -F --type rust"
 # ripgrep for go files
 alias rgg="rg --type go"
 # use the large-v2 model for whisper.cpp
@@ -26,6 +28,10 @@ alias whisper-cli="whisper-cli -m ~/git/whisper.cpp/models/ggml-large-v2.bin"
 alias bitcoind="bitcoind -datadir=$HOME/.bitcoin"
 alias bitcoin-cli="bitcoin-cli -datadir=$HOME/.bitcoin"
 alias bitcoin-qt="bitcoin-qt -datadir=$HOME/.bitcoin"
+
+# use `~/.utreexod` as the datadir for `utreexod` and `utreexoctl`
+alias utreexod="utreexod --datadir=$HOME/.utreexod"
+alias utreexoctl="utreexoctl --datadir=$HOME/.utreexod"
 
 # mkdir and cd to directory in one go
 mkcd() {

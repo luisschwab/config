@@ -21,6 +21,7 @@ export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/git/config/scripts:$PATH"
 export PATH="$HOME/git/whisper.cpp/build/bin:$PATH"
 export PATH="/usr/local/texlive/2025basic/bin/universal-darwin/:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 export CFLAGS="-I/opt/homebrew/include"
 export LDFLAGS="-L/opt/homebrew/lib"
@@ -28,3 +29,15 @@ export LDFLAGS="-L/opt/homebrew/lib"
 # set BITCOIND_EXE and ELECTRS_EXE environment variables for `rust-esplora-client`
 export BITCOIND_EXE="$HOME/git/config/scripts/bitcoind"
 export ELECTRS_EXE="$HOME/.cargo/bin/electrs"
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+

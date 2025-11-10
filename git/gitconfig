@@ -18,6 +18,8 @@
     empurra = push
     s = status
     sd = diff --staged
+    st = stash
+    stp = stash pop
     sync = pull upstream master
     undo = reset --soft HEAD^
 [push]

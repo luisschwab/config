@@ -7,4 +7,6 @@
 # To mount the network drive, Finder > Go > Connect to Server, then
 # use `linsk` as the user and the password provided in the CLI
 
+# ./mount-luks.sh /dev/disk5 vdb
+
 sudo /$HOME/stuff/linsk/linsk run -l dev:"$1" "$2"

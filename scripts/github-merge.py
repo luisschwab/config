@@ -1,0 +1,1 @@
+/Users/luisschwab/git/bitcoin-maintainer-tools/github-merge.py

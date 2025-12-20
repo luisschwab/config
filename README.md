@@ -35,7 +35,7 @@ ln -s ~/git/config/halloy/config.toml ~/.config/halloy/config.toml
 
 ```shell
 ln -s ~/git/config/helix/config.toml ~/.config/helix/config.toml
-ln -s ~/git/config/helix/themes/gruvbox_dark_hard_transparent.toml ~/git/config/helix/themes/gruvbox_dark_hard_transparent.toml
+ln -s ~/git/config/helix/themes/gruvbox_dark_hard_transparent.toml ~/.config/helix/themes/gruvbox_dark_hard_transparent.toml
 ```
 
 ## hosts

@@ -7,28 +7,67 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "terminal": {
-    "dock": "right"
-  },
-  "auto_update": false,
-  "telemetry": {
-    "metrics": false,
-    "diagnostics": false
-  },
-  "helix_mode": true,
-  "tab_size": 4,
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Gruvbox Dark Hard"
-  },
-  "format_on_save": "off",
-  "languages": {
-    "Rust": {
-      "format_on_save": "off"
+    "disable_ai": true,
+    "agent": {
+        "enabled": false,
+        "default_profile": "minimal",
+        "model_parameters": []
+    },
+    "terminal": {
+        "dock": "right"
+    },
+    "auto_update": false,
+    "telemetry": {
+        "metrics": false,
+        "diagnostics": false
+    },
+    "helix_mode": true,
+    "tab_size": 4,
+    "ui_font_size": 16,
+    "buffer_font_size": 16,
+    "buffer_font_family": "Berkeley Mono",
+    "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "Gruvbox Dark Hard"
+    },
+    "show_whitespaces": "trailing",
+    "whitespace_map": {
+      "space": "█",
+      "tab": "▶"
+    },
+    "format_on_save": "off",
+    "languages": {
+        "Rust": {
+            "format_on_save": "off"
+        },
+        "Python": {
+            "language_servers": [
+                "ty",
+            ]
+        },
+        "C++": {
+            "language_servers": [
+                "clangd",
+            ]
+        }
+    },
+    "lsp": {
+        "rust-analyzer": {
+            "initialization_options": {
+                "check": {
+                    "allFeatures": true
+                },
+                "cargo": {
+                    "allFeatures": true
+                }
+            }
+        },
+        "tinymist": {
+          "settings": {
+            "exportPdf": "onSave",
+            "outputPath": "$root/$name"
+          }
+        }
     }
-  }
 }
-

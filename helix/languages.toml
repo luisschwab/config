@@ -1,0 +1,9 @@
+[[language]]
+name = "rust"
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+check = { allFeatures = true }
+cargo = { allFeatures = true }

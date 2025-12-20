@@ -1,7 +1,0 @@
-[servers.znc]
-nickname = "luisschwab/libera"
-password = "<redacted>"
-server = "irc.luisschwab.net"
-port = 6697
-use_tls = true
-username = "luisschwab/libera"

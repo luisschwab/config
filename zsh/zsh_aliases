@@ -7,6 +7,10 @@ alias nproc="sysctl -n hw.logicalcpu"
 
 # cargo run
 alias cr="cargo run"
+# git aliases
+alias gl="git l"
+alias gd="git d"
+alias gsd="git sd"
 # helix
 alias h="hx"
 # trash
@@ -25,9 +29,9 @@ alias rgg="rg --type go"
 alias whisper-cli="whisper-cli -m ~/git/whisper.cpp/models/ggml-large-v2.bin"
 
 # use `~/.bitcoin` as the datadir for `bitcoind`, `bitcoin-cli` and `bitcoin-qt`
-alias bitcoind="bitcoind -datadir=$HOME/.bitcoin"
-alias bitcoin-cli="bitcoin-cli -datadir=$HOME/.bitcoin"
-alias bitcoin-qt="bitcoin-qt -datadir=$HOME/.bitcoin"
+alias bitcoind="/opt/homebrew/bin/bitcoind -datadir=$HOME/.bitcoin"
+alias bitcoin-cli="/opt/homebrew/bin/bitcoin-cli -datadir=$HOME/.bitcoin"
+alias bitcoin-qt="/opt/homebrew/bin/bitcoin-qt -datadir=$HOME/.bitcoin"
 
 # use `~/.utreexod` as the datadir for `utreexod` and `utreexoctl`
 alias utreexod="utreexod --datadir=$HOME/.utreexod"

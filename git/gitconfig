@@ -2,15 +2,44 @@
     name = Luis Schwab
     email = luisschwab@protonmail.com
     signingkey = FC43D25BEDD5EE7C
+
 [core]
     editor = hx
+    pager = delta
     filemode = false
     excludesfile = /Users/luisschwab/git/config/git/gitignore
+
 [init]
     defaultBranch = master
+
+[push]
+    autoSetupRemote = true
+    default = current
+
+[commit]
+    gpgsign = true
+
+[rerere]
+    enabled = true
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move
+    dark = true
+    side-by-side = true
+
+[merge]
+    conflictStyle = zdiff3
+
 [alias]
     d = diff
     f = fetch
+    fep = fetch --prune
     l = log --color --graph \
         --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
         --abbrev-commit
@@ -22,10 +51,4 @@
     stp = stash pop
     sync = pull upstream master
     undo = reset --soft HEAD^
-[push]
-    autoSetupRemote = true
-    default = current
-[commit]
-    gpgsign = true
-[rerere]
-    enabled = true
+

@@ -1,1 +1,5 @@
+font-family = "Berkeley Mono"
 theme = Gruvbox Dark Hard
+
+macos-auto-secure-input = false
+macos-secure-input-indication = true
